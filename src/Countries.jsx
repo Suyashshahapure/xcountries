@@ -29,9 +29,9 @@ function Countries() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        // Assuming data is an array of countries
         setCountries(data);
-      });
+      })
+      .catch((error) => console.error("Error Happening:", error));
   }, []);
 
   return (
